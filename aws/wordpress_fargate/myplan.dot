@@ -1,0 +1,701 @@
+digraph {
+	compound = "true"
+	newrank = "true"
+	subgraph "root" {
+		"[root] aws_appautoscaling_policy.scale_down" [label = "aws_appautoscaling_policy.scale_down", shape = "box"]
+		"[root] aws_appautoscaling_policy.scale_down (expand)" [label = "aws_appautoscaling_policy.scale_down", shape = "box"]
+		"[root] aws_appautoscaling_policy.scale_up" [label = "aws_appautoscaling_policy.scale_up", shape = "box"]
+		"[root] aws_appautoscaling_policy.scale_up (expand)" [label = "aws_appautoscaling_policy.scale_up", shape = "box"]
+		"[root] aws_appautoscaling_target.this" [label = "aws_appautoscaling_target.this", shape = "box"]
+		"[root] aws_appautoscaling_target.this (expand)" [label = "aws_appautoscaling_target.this", shape = "box"]
+		"[root] aws_cloudwatch_log_group.wordpress" [label = "aws_cloudwatch_log_group.wordpress", shape = "box"]
+		"[root] aws_cloudwatch_log_group.wordpress (expand)" [label = "aws_cloudwatch_log_group.wordpress", shape = "box"]
+		"[root] aws_cloudwatch_metric_alarm.cpu_utilization_high" [label = "aws_cloudwatch_metric_alarm.cpu_utilization_high", shape = "box"]
+		"[root] aws_cloudwatch_metric_alarm.cpu_utilization_high (expand)" [label = "aws_cloudwatch_metric_alarm.cpu_utilization_high", shape = "box"]
+		"[root] aws_cloudwatch_metric_alarm.cpu_utilization_low" [label = "aws_cloudwatch_metric_alarm.cpu_utilization_low", shape = "box"]
+		"[root] aws_cloudwatch_metric_alarm.cpu_utilization_low (expand)" [label = "aws_cloudwatch_metric_alarm.cpu_utilization_low", shape = "box"]
+		"[root] aws_db_subnet_group.this" [label = "aws_db_subnet_group.this", shape = "box"]
+		"[root] aws_db_subnet_group.this (expand)" [label = "aws_db_subnet_group.this", shape = "box"]
+		"[root] aws_ecs_cluster.this" [label = "aws_ecs_cluster.this", shape = "box"]
+		"[root] aws_ecs_cluster.this (expand)" [label = "aws_ecs_cluster.this", shape = "box"]
+		"[root] aws_ecs_service.this" [label = "aws_ecs_service.this", shape = "box"]
+		"[root] aws_ecs_service.this (expand)" [label = "aws_ecs_service.this", shape = "box"]
+		"[root] aws_ecs_task_definition.this" [label = "aws_ecs_task_definition.this", shape = "box"]
+		"[root] aws_ecs_task_definition.this (expand)" [label = "aws_ecs_task_definition.this", shape = "box"]
+		"[root] aws_efs_file_system.this" [label = "aws_efs_file_system.this", shape = "box"]
+		"[root] aws_efs_file_system.this (expand)" [label = "aws_efs_file_system.this", shape = "box"]
+		"[root] aws_efs_mount_target.this (expand)" [label = "aws_efs_mount_target.this", shape = "box"]
+		"[root] aws_efs_mount_target.this[0]" [label = "aws_efs_mount_target.this", shape = "box"]
+		"[root] aws_efs_mount_target.this[1]" [label = "aws_efs_mount_target.this", shape = "box"]
+		"[root] aws_efs_mount_target.this[2]" [label = "aws_efs_mount_target.this", shape = "box"]
+		"[root] aws_iam_policy.task_execution_policy" [label = "aws_iam_policy.task_execution_policy", shape = "box"]
+		"[root] aws_iam_policy.task_execution_policy (expand)" [label = "aws_iam_policy.task_execution_policy", shape = "box"]
+		"[root] aws_iam_policy.task_policy" [label = "aws_iam_policy.task_policy", shape = "box"]
+		"[root] aws_iam_policy.task_policy (expand)" [label = "aws_iam_policy.task_policy", shape = "box"]
+		"[root] aws_iam_role.task_execution_role" [label = "aws_iam_role.task_execution_role", shape = "box"]
+		"[root] aws_iam_role.task_execution_role (expand)" [label = "aws_iam_role.task_execution_role", shape = "box"]
+		"[root] aws_iam_role.task_role" [label = "aws_iam_role.task_role", shape = "box"]
+		"[root] aws_iam_role.task_role (expand)" [label = "aws_iam_role.task_role", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.task_execution_policy_attach" [label = "aws_iam_role_policy_attachment.task_execution_policy_attach", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.task_execution_policy_attach (expand)" [label = "aws_iam_role_policy_attachment.task_execution_policy_attach", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.task_policy_attach" [label = "aws_iam_role_policy_attachment.task_policy_attach", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.task_policy_attach (expand)" [label = "aws_iam_role_policy_attachment.task_policy_attach", shape = "box"]
+		"[root] aws_lb_target_group.this" [label = "aws_lb_target_group.this", shape = "box"]
+		"[root] aws_lb_target_group.this (expand)" [label = "aws_lb_target_group.this", shape = "box"]
+		"[root] aws_rds_cluster.this" [label = "aws_rds_cluster.this", shape = "box"]
+		"[root] aws_rds_cluster.this (expand)" [label = "aws_rds_cluster.this", shape = "box"]
+		"[root] aws_security_group.alb" [label = "aws_security_group.alb", shape = "box"]
+		"[root] aws_security_group.alb (expand)" [label = "aws_security_group.alb", shape = "box"]
+		"[root] aws_security_group.db" [label = "aws_security_group.db", shape = "box"]
+		"[root] aws_security_group.db (expand)" [label = "aws_security_group.db", shape = "box"]
+		"[root] aws_security_group.efs" [label = "aws_security_group.efs", shape = "box"]
+		"[root] aws_security_group.efs (expand)" [label = "aws_security_group.efs", shape = "box"]
+		"[root] aws_security_group.wordpress" [label = "aws_security_group.wordpress", shape = "box"]
+		"[root] aws_security_group.wordpress (expand)" [label = "aws_security_group.wordpress", shape = "box"]
+		"[root] aws_ssm_parameter.db_master_password" [label = "aws_ssm_parameter.db_master_password", shape = "box"]
+		"[root] aws_ssm_parameter.db_master_password (expand)" [label = "aws_ssm_parameter.db_master_password", shape = "box"]
+		"[root] aws_ssm_parameter.db_master_user" [label = "aws_ssm_parameter.db_master_user", shape = "box"]
+		"[root] aws_ssm_parameter.db_master_user (expand)" [label = "aws_ssm_parameter.db_master_user", shape = "box"]
+		"[root] data.aws_availability_zones.this (expand)" [label = "data.aws_availability_zones.this", shape = "box"]
+		"[root] data.aws_region.current (expand)" [label = "data.aws_region.current", shape = "box"]
+		"[root] module.acm.aws_acm_certificate.this (expand)" [label = "module.acm.aws_acm_certificate.this", shape = "box"]
+		"[root] module.acm.aws_acm_certificate.this[0]" [label = "module.acm.aws_acm_certificate.this", shape = "box"]
+		"[root] module.acm_alb.aws_acm_certificate.this (expand)" [label = "module.acm_alb.aws_acm_certificate.this", shape = "box"]
+		"[root] module.acm_alb.aws_acm_certificate.this[0]" [label = "module.acm_alb.aws_acm_certificate.this", shape = "box"]
+		"[root] module.alb.aws_lb.this (expand)" [label = "module.alb.aws_lb.this", shape = "box"]
+		"[root] module.alb.aws_lb.this[0]" [label = "module.alb.aws_lb.this", shape = "box"]
+		"[root] module.alb.aws_lb_target_group.main (expand)" [label = "module.alb.aws_lb_target_group.main", shape = "box"]
+		"[root] module.alb.aws_lb_target_group.main[0]" [label = "module.alb.aws_lb_target_group.main", shape = "box"]
+		"[root] module.vpc.aws_eip.nat (expand)" [label = "module.vpc.aws_eip.nat", shape = "box"]
+		"[root] module.vpc.aws_eip.nat[0]" [label = "module.vpc.aws_eip.nat", shape = "box"]
+		"[root] module.vpc.aws_eip.nat[1]" [label = "module.vpc.aws_eip.nat", shape = "box"]
+		"[root] module.vpc.aws_eip.nat[2]" [label = "module.vpc.aws_eip.nat", shape = "box"]
+		"[root] module.vpc.aws_internet_gateway.this (expand)" [label = "module.vpc.aws_internet_gateway.this", shape = "box"]
+		"[root] module.vpc.aws_internet_gateway.this[0]" [label = "module.vpc.aws_internet_gateway.this", shape = "box"]
+		"[root] module.vpc.aws_nat_gateway.this (expand)" [label = "module.vpc.aws_nat_gateway.this", shape = "box"]
+		"[root] module.vpc.aws_nat_gateway.this[0]" [label = "module.vpc.aws_nat_gateway.this", shape = "box"]
+		"[root] module.vpc.aws_nat_gateway.this[1]" [label = "module.vpc.aws_nat_gateway.this", shape = "box"]
+		"[root] module.vpc.aws_nat_gateway.this[2]" [label = "module.vpc.aws_nat_gateway.this", shape = "box"]
+		"[root] module.vpc.aws_route.private_nat_gateway (expand)" [label = "module.vpc.aws_route.private_nat_gateway", shape = "box"]
+		"[root] module.vpc.aws_route.private_nat_gateway[0]" [label = "module.vpc.aws_route.private_nat_gateway", shape = "box"]
+		"[root] module.vpc.aws_route.private_nat_gateway[1]" [label = "module.vpc.aws_route.private_nat_gateway", shape = "box"]
+		"[root] module.vpc.aws_route.private_nat_gateway[2]" [label = "module.vpc.aws_route.private_nat_gateway", shape = "box"]
+		"[root] module.vpc.aws_route.public_internet_gateway (expand)" [label = "module.vpc.aws_route.public_internet_gateway", shape = "box"]
+		"[root] module.vpc.aws_route.public_internet_gateway[0]" [label = "module.vpc.aws_route.public_internet_gateway", shape = "box"]
+		"[root] module.vpc.aws_route_table.private (expand)" [label = "module.vpc.aws_route_table.private", shape = "box"]
+		"[root] module.vpc.aws_route_table.private[0]" [label = "module.vpc.aws_route_table.private", shape = "box"]
+		"[root] module.vpc.aws_route_table.private[1]" [label = "module.vpc.aws_route_table.private", shape = "box"]
+		"[root] module.vpc.aws_route_table.private[2]" [label = "module.vpc.aws_route_table.private", shape = "box"]
+		"[root] module.vpc.aws_route_table.public (expand)" [label = "module.vpc.aws_route_table.public", shape = "box"]
+		"[root] module.vpc.aws_route_table.public[0]" [label = "module.vpc.aws_route_table.public", shape = "box"]
+		"[root] module.vpc.aws_route_table_association.private (expand)" [label = "module.vpc.aws_route_table_association.private", shape = "box"]
+		"[root] module.vpc.aws_route_table_association.private[0]" [label = "module.vpc.aws_route_table_association.private", shape = "box"]
+		"[root] module.vpc.aws_route_table_association.private[1]" [label = "module.vpc.aws_route_table_association.private", shape = "box"]
+		"[root] module.vpc.aws_route_table_association.private[2]" [label = "module.vpc.aws_route_table_association.private", shape = "box"]
+		"[root] module.vpc.aws_route_table_association.public (expand)" [label = "module.vpc.aws_route_table_association.public", shape = "box"]
+		"[root] module.vpc.aws_route_table_association.public[0]" [label = "module.vpc.aws_route_table_association.public", shape = "box"]
+		"[root] module.vpc.aws_route_table_association.public[1]" [label = "module.vpc.aws_route_table_association.public", shape = "box"]
+		"[root] module.vpc.aws_route_table_association.public[2]" [label = "module.vpc.aws_route_table_association.public", shape = "box"]
+		"[root] module.vpc.aws_subnet.private (expand)" [label = "module.vpc.aws_subnet.private", shape = "box"]
+		"[root] module.vpc.aws_subnet.private[0]" [label = "module.vpc.aws_subnet.private", shape = "box"]
+		"[root] module.vpc.aws_subnet.private[1]" [label = "module.vpc.aws_subnet.private", shape = "box"]
+		"[root] module.vpc.aws_subnet.private[2]" [label = "module.vpc.aws_subnet.private", shape = "box"]
+		"[root] module.vpc.aws_subnet.public (expand)" [label = "module.vpc.aws_subnet.public", shape = "box"]
+		"[root] module.vpc.aws_subnet.public[0]" [label = "module.vpc.aws_subnet.public", shape = "box"]
+		"[root] module.vpc.aws_subnet.public[1]" [label = "module.vpc.aws_subnet.public", shape = "box"]
+		"[root] module.vpc.aws_subnet.public[2]" [label = "module.vpc.aws_subnet.public", shape = "box"]
+		"[root] module.vpc.aws_vpc.this (expand)" [label = "module.vpc.aws_vpc.this", shape = "box"]
+		"[root] module.vpc.aws_vpc.this[0]" [label = "module.vpc.aws_vpc.this", shape = "box"]
+		"[root] module.vpc.aws_vpc_ipv4_cidr_block_association.this (expand)" [label = "module.vpc.aws_vpc_ipv4_cidr_block_association.this", shape = "box"]
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"]" [label = "provider[\"registry.terraform.io/hashicorp/aws\"]", shape = "diamond"]
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"].us_east_1" [label = "provider[\"registry.terraform.io/hashicorp/aws\"].us_east_1", shape = "diamond"]
+		"[root] provider[\"registry.terraform.io/hashicorp/random\"]" [label = "provider[\"registry.terraform.io/hashicorp/random\"]", shape = "diamond"]
+		"[root] random_string.snapshot_suffix" [label = "random_string.snapshot_suffix", shape = "box"]
+		"[root] random_string.snapshot_suffix (expand)" [label = "random_string.snapshot_suffix", shape = "box"]
+		"[root] var.cf_price_class" [label = "var.cf_price_class", shape = "note"]
+		"[root] var.db_auto_pause" [label = "var.db_auto_pause", shape = "note"]
+		"[root] var.db_backup_retention_days" [label = "var.db_backup_retention_days", shape = "note"]
+		"[root] var.db_backup_window" [label = "var.db_backup_window", shape = "note"]
+		"[root] var.db_engine_version" [label = "var.db_engine_version", shape = "note"]
+		"[root] var.db_master_password" [label = "var.db_master_password", shape = "note"]
+		"[root] var.db_master_username" [label = "var.db_master_username", shape = "note"]
+		"[root] var.db_max_capacity" [label = "var.db_max_capacity", shape = "note"]
+		"[root] var.db_min_capacity" [label = "var.db_min_capacity", shape = "note"]
+		"[root] var.db_seconds_until_auto_pause" [label = "var.db_seconds_until_auto_pause", shape = "note"]
+		"[root] var.desired_count" [label = "var.desired_count", shape = "note"]
+		"[root] var.environment" [label = "var.environment", shape = "note"]
+		"[root] var.error_ttl" [label = "var.error_ttl", shape = "note"]
+		"[root] var.log_retention_in_days" [label = "var.log_retention_in_days", shape = "note"]
+		"[root] var.max_task" [label = "var.max_task", shape = "note"]
+		"[root] var.min_task" [label = "var.min_task", shape = "note"]
+		"[root] var.prefix" [label = "var.prefix", shape = "note"]
+		"[root] var.private_subnet_cidrs" [label = "var.private_subnet_cidrs", shape = "note"]
+		"[root] var.public_alb_domain" [label = "var.public_alb_domain", shape = "note"]
+		"[root] var.public_subnet_cidrs" [label = "var.public_subnet_cidrs", shape = "note"]
+		"[root] var.scaling_down_adjustment" [label = "var.scaling_down_adjustment", shape = "note"]
+		"[root] var.scaling_down_cooldown" [label = "var.scaling_down_cooldown", shape = "note"]
+		"[root] var.scaling_up_adjustment" [label = "var.scaling_up_adjustment", shape = "note"]
+		"[root] var.scaling_up_cooldown" [label = "var.scaling_up_cooldown", shape = "note"]
+		"[root] var.site_domain" [label = "var.site_domain", shape = "note"]
+		"[root] var.tags" [label = "var.tags", shape = "note"]
+		"[root] var.task_cpu" [label = "var.task_cpu", shape = "note"]
+		"[root] var.task_cpu_high_threshold" [label = "var.task_cpu_high_threshold", shape = "note"]
+		"[root] var.task_cpu_low_threshold" [label = "var.task_cpu_low_threshold", shape = "note"]
+		"[root] var.task_memory" [label = "var.task_memory", shape = "note"]
+		"[root] var.vpc_cidr" [label = "var.vpc_cidr", shape = "note"]
+		"[root] aws_appautoscaling_policy.scale_down (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_appautoscaling_policy.scale_down" -> "[root] aws_appautoscaling_policy.scale_down (expand)"
+		"[root] aws_appautoscaling_policy.scale_down" -> "[root] aws_appautoscaling_target.this"
+		"[root] aws_appautoscaling_policy.scale_down" -> "[root] var.scaling_down_adjustment"
+		"[root] aws_appautoscaling_policy.scale_down" -> "[root] var.scaling_down_cooldown"
+		"[root] aws_appautoscaling_policy.scale_up (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_appautoscaling_policy.scale_up" -> "[root] aws_appautoscaling_policy.scale_up (expand)"
+		"[root] aws_appautoscaling_policy.scale_up" -> "[root] aws_appautoscaling_target.this"
+		"[root] aws_appautoscaling_policy.scale_up" -> "[root] var.scaling_up_adjustment"
+		"[root] aws_appautoscaling_policy.scale_up" -> "[root] var.scaling_up_cooldown"
+		"[root] aws_appautoscaling_target.this (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_appautoscaling_target.this" -> "[root] aws_appautoscaling_target.this (expand)"
+		"[root] aws_appautoscaling_target.this" -> "[root] aws_ecs_service.this"
+		"[root] aws_appautoscaling_target.this" -> "[root] var.max_task"
+		"[root] aws_appautoscaling_target.this" -> "[root] var.min_task"
+		"[root] aws_cloudwatch_log_group.wordpress (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_cloudwatch_log_group.wordpress" -> "[root] aws_cloudwatch_log_group.wordpress (expand)"
+		"[root] aws_cloudwatch_log_group.wordpress" -> "[root] var.environment"
+		"[root] aws_cloudwatch_log_group.wordpress" -> "[root] var.log_retention_in_days"
+		"[root] aws_cloudwatch_log_group.wordpress" -> "[root] var.prefix"
+		"[root] aws_cloudwatch_log_group.wordpress" -> "[root] var.tags"
+		"[root] aws_cloudwatch_metric_alarm.cpu_utilization_high (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_cloudwatch_metric_alarm.cpu_utilization_high" -> "[root] aws_appautoscaling_policy.scale_up"
+		"[root] aws_cloudwatch_metric_alarm.cpu_utilization_high" -> "[root] aws_cloudwatch_metric_alarm.cpu_utilization_high (expand)"
+		"[root] aws_cloudwatch_metric_alarm.cpu_utilization_high" -> "[root] var.task_cpu_high_threshold"
+		"[root] aws_cloudwatch_metric_alarm.cpu_utilization_low (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_cloudwatch_metric_alarm.cpu_utilization_low" -> "[root] aws_appautoscaling_policy.scale_down"
+		"[root] aws_cloudwatch_metric_alarm.cpu_utilization_low" -> "[root] aws_cloudwatch_metric_alarm.cpu_utilization_low (expand)"
+		"[root] aws_cloudwatch_metric_alarm.cpu_utilization_low" -> "[root] var.task_cpu_low_threshold"
+		"[root] aws_db_subnet_group.this (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_db_subnet_group.this" -> "[root] aws_db_subnet_group.this (expand)"
+		"[root] aws_db_subnet_group.this" -> "[root] module.vpc.output.private_subnets (expand)"
+		"[root] aws_ecs_cluster.this (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_ecs_cluster.this" -> "[root] aws_ecs_cluster.this (expand)"
+		"[root] aws_ecs_cluster.this" -> "[root] var.environment"
+		"[root] aws_ecs_cluster.this" -> "[root] var.prefix"
+		"[root] aws_ecs_service.this (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_ecs_service.this" -> "[root] aws_ecs_cluster.this"
+		"[root] aws_ecs_service.this" -> "[root] aws_ecs_service.this (expand)"
+		"[root] aws_ecs_service.this" -> "[root] aws_ecs_task_definition.this"
+		"[root] aws_ecs_service.this" -> "[root] aws_lb_target_group.this"
+		"[root] aws_ecs_service.this" -> "[root] aws_security_group.alb"
+		"[root] aws_ecs_service.this" -> "[root] aws_security_group.efs"
+		"[root] aws_ecs_service.this" -> "[root] var.desired_count"
+		"[root] aws_ecs_task_definition.this (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_ecs_task_definition.this" -> "[root] aws_cloudwatch_log_group.wordpress"
+		"[root] aws_ecs_task_definition.this" -> "[root] aws_ecs_task_definition.this (expand)"
+		"[root] aws_ecs_task_definition.this" -> "[root] aws_efs_file_system.this"
+		"[root] aws_ecs_task_definition.this" -> "[root] aws_iam_role.task_execution_role"
+		"[root] aws_ecs_task_definition.this" -> "[root] aws_iam_role.task_role"
+		"[root] aws_ecs_task_definition.this" -> "[root] aws_rds_cluster.this"
+		"[root] aws_ecs_task_definition.this" -> "[root] aws_ssm_parameter.db_master_password"
+		"[root] aws_ecs_task_definition.this" -> "[root] aws_ssm_parameter.db_master_user"
+		"[root] aws_ecs_task_definition.this" -> "[root] data.aws_region.current (expand)"
+		"[root] aws_ecs_task_definition.this" -> "[root] var.task_cpu"
+		"[root] aws_ecs_task_definition.this" -> "[root] var.task_memory"
+		"[root] aws_efs_file_system.this (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_efs_file_system.this" -> "[root] aws_efs_file_system.this (expand)"
+		"[root] aws_efs_file_system.this" -> "[root] var.environment"
+		"[root] aws_efs_file_system.this" -> "[root] var.prefix"
+		"[root] aws_efs_file_system.this" -> "[root] var.tags"
+		"[root] aws_efs_mount_target.this (expand)" -> "[root] module.vpc.output.private_subnets (expand)"
+		"[root] aws_efs_mount_target.this[0]" -> "[root] aws_efs_file_system.this"
+		"[root] aws_efs_mount_target.this[0]" -> "[root] aws_efs_mount_target.this (expand)"
+		"[root] aws_efs_mount_target.this[0]" -> "[root] aws_security_group.efs"
+		"[root] aws_efs_mount_target.this[1]" -> "[root] aws_efs_file_system.this"
+		"[root] aws_efs_mount_target.this[1]" -> "[root] aws_efs_mount_target.this (expand)"
+		"[root] aws_efs_mount_target.this[1]" -> "[root] aws_security_group.efs"
+		"[root] aws_efs_mount_target.this[2]" -> "[root] aws_efs_file_system.this"
+		"[root] aws_efs_mount_target.this[2]" -> "[root] aws_efs_mount_target.this (expand)"
+		"[root] aws_efs_mount_target.this[2]" -> "[root] aws_security_group.efs"
+		"[root] aws_iam_policy.task_execution_policy (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_iam_policy.task_execution_policy" -> "[root] aws_iam_policy.task_execution_policy (expand)"
+		"[root] aws_iam_policy.task_policy (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_iam_policy.task_policy" -> "[root] aws_iam_policy.task_policy (expand)"
+		"[root] aws_iam_role.task_execution_role (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_iam_role.task_execution_role" -> "[root] aws_iam_role.task_execution_role (expand)"
+		"[root] aws_iam_role.task_execution_role" -> "[root] var.environment"
+		"[root] aws_iam_role.task_execution_role" -> "[root] var.prefix"
+		"[root] aws_iam_role.task_execution_role" -> "[root] var.tags"
+		"[root] aws_iam_role.task_role (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_iam_role.task_role" -> "[root] aws_iam_role.task_role (expand)"
+		"[root] aws_iam_role.task_role" -> "[root] var.environment"
+		"[root] aws_iam_role.task_role" -> "[root] var.prefix"
+		"[root] aws_iam_role.task_role" -> "[root] var.tags"
+		"[root] aws_iam_role_policy_attachment.task_execution_policy_attach (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_iam_role_policy_attachment.task_execution_policy_attach" -> "[root] aws_iam_policy.task_execution_policy"
+		"[root] aws_iam_role_policy_attachment.task_execution_policy_attach" -> "[root] aws_iam_role.task_execution_role"
+		"[root] aws_iam_role_policy_attachment.task_execution_policy_attach" -> "[root] aws_iam_role_policy_attachment.task_execution_policy_attach (expand)"
+		"[root] aws_iam_role_policy_attachment.task_policy_attach (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_iam_role_policy_attachment.task_policy_attach" -> "[root] aws_iam_policy.task_policy"
+		"[root] aws_iam_role_policy_attachment.task_policy_attach" -> "[root] aws_iam_role.task_role"
+		"[root] aws_iam_role_policy_attachment.task_policy_attach" -> "[root] aws_iam_role_policy_attachment.task_policy_attach (expand)"
+		"[root] aws_lb_target_group.this (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_lb_target_group.this" -> "[root] aws_lb_target_group.this (expand)"
+		"[root] aws_lb_target_group.this" -> "[root] module.vpc.output.vpc_id (expand)"
+		"[root] aws_rds_cluster.this (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_rds_cluster.this" -> "[root] aws_db_subnet_group.this"
+		"[root] aws_rds_cluster.this" -> "[root] aws_rds_cluster.this (expand)"
+		"[root] aws_rds_cluster.this" -> "[root] aws_security_group.db"
+		"[root] aws_rds_cluster.this" -> "[root] random_string.snapshot_suffix"
+		"[root] aws_rds_cluster.this" -> "[root] var.db_auto_pause"
+		"[root] aws_rds_cluster.this" -> "[root] var.db_backup_retention_days"
+		"[root] aws_rds_cluster.this" -> "[root] var.db_backup_window"
+		"[root] aws_rds_cluster.this" -> "[root] var.db_engine_version"
+		"[root] aws_rds_cluster.this" -> "[root] var.db_master_password"
+		"[root] aws_rds_cluster.this" -> "[root] var.db_master_username"
+		"[root] aws_rds_cluster.this" -> "[root] var.db_max_capacity"
+		"[root] aws_rds_cluster.this" -> "[root] var.db_min_capacity"
+		"[root] aws_rds_cluster.this" -> "[root] var.db_seconds_until_auto_pause"
+		"[root] aws_security_group.alb (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_security_group.alb" -> "[root] aws_security_group.alb (expand)"
+		"[root] aws_security_group.alb" -> "[root] module.vpc.output.vpc_id (expand)"
+		"[root] aws_security_group.db (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_security_group.db" -> "[root] aws_security_group.db (expand)"
+		"[root] aws_security_group.db" -> "[root] module.vpc.output.vpc_id (expand)"
+		"[root] aws_security_group.efs (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_security_group.efs" -> "[root] aws_security_group.efs (expand)"
+		"[root] aws_security_group.efs" -> "[root] module.vpc.output.vpc_id (expand)"
+		"[root] aws_security_group.wordpress (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_security_group.wordpress" -> "[root] aws_security_group.alb"
+		"[root] aws_security_group.wordpress" -> "[root] aws_security_group.efs"
+		"[root] aws_security_group.wordpress" -> "[root] aws_security_group.wordpress (expand)"
+		"[root] aws_ssm_parameter.db_master_password (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_ssm_parameter.db_master_password" -> "[root] aws_ssm_parameter.db_master_password (expand)"
+		"[root] aws_ssm_parameter.db_master_password" -> "[root] var.db_master_password"
+		"[root] aws_ssm_parameter.db_master_password" -> "[root] var.environment"
+		"[root] aws_ssm_parameter.db_master_password" -> "[root] var.prefix"
+		"[root] aws_ssm_parameter.db_master_password" -> "[root] var.tags"
+		"[root] aws_ssm_parameter.db_master_user (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_ssm_parameter.db_master_user" -> "[root] aws_ssm_parameter.db_master_user (expand)"
+		"[root] aws_ssm_parameter.db_master_user" -> "[root] var.db_master_username"
+		"[root] aws_ssm_parameter.db_master_user" -> "[root] var.environment"
+		"[root] aws_ssm_parameter.db_master_user" -> "[root] var.prefix"
+		"[root] aws_ssm_parameter.db_master_user" -> "[root] var.tags"
+		"[root] data.aws_availability_zones.this (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] data.aws_region.current (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] module.acm (close)" -> "[root] module.acm.aws_acm_certificate.this[0]"
+		"[root] module.acm.aws_acm_certificate.this (expand)" -> "[root] module.acm.var.create_certificate (expand)"
+		"[root] module.acm.aws_acm_certificate.this (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"].us_east_1"
+		"[root] module.acm.aws_acm_certificate.this[0]" -> "[root] module.acm.aws_acm_certificate.this (expand)"
+		"[root] module.acm.aws_acm_certificate.this[0]" -> "[root] module.acm.var.certificate_transparency_logging_preference (expand)"
+		"[root] module.acm.aws_acm_certificate.this[0]" -> "[root] module.acm.var.domain_name (expand)"
+		"[root] module.acm.aws_acm_certificate.this[0]" -> "[root] module.acm.var.subject_alternative_names (expand)"
+		"[root] module.acm.aws_acm_certificate.this[0]" -> "[root] module.acm.var.tags (expand)"
+		"[root] module.acm.aws_acm_certificate.this[0]" -> "[root] module.acm.var.validation_method (expand)"
+		"[root] module.acm.var.certificate_transparency_logging_preference (expand)" -> "[root] module.acm (expand)"
+		"[root] module.acm.var.create_certificate (expand)" -> "[root] module.acm (expand)"
+		"[root] module.acm.var.domain_name (expand)" -> "[root] module.acm (expand)"
+		"[root] module.acm.var.domain_name (expand)" -> "[root] var.site_domain"
+		"[root] module.acm.var.subject_alternative_names (expand)" -> "[root] module.acm (expand)"
+		"[root] module.acm.var.tags (expand)" -> "[root] module.acm (expand)"
+		"[root] module.acm.var.tags (expand)" -> "[root] var.tags"
+		"[root] module.acm.var.validation_method (expand)" -> "[root] module.acm (expand)"
+		"[root] module.acm_alb (close)" -> "[root] module.acm_alb.aws_acm_certificate.this[0]"
+		"[root] module.acm_alb.aws_acm_certificate.this (expand)" -> "[root] module.acm_alb.var.create_certificate (expand)"
+		"[root] module.acm_alb.aws_acm_certificate.this (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] module.acm_alb.aws_acm_certificate.this[0]" -> "[root] module.acm_alb.aws_acm_certificate.this (expand)"
+		"[root] module.acm_alb.aws_acm_certificate.this[0]" -> "[root] module.acm_alb.var.certificate_transparency_logging_preference (expand)"
+		"[root] module.acm_alb.aws_acm_certificate.this[0]" -> "[root] module.acm_alb.var.domain_name (expand)"
+		"[root] module.acm_alb.aws_acm_certificate.this[0]" -> "[root] module.acm_alb.var.subject_alternative_names (expand)"
+		"[root] module.acm_alb.aws_acm_certificate.this[0]" -> "[root] module.acm_alb.var.tags (expand)"
+		"[root] module.acm_alb.aws_acm_certificate.this[0]" -> "[root] module.acm_alb.var.validation_method (expand)"
+		"[root] module.acm_alb.var.certificate_transparency_logging_preference (expand)" -> "[root] module.acm_alb (expand)"
+		"[root] module.acm_alb.var.create_certificate (expand)" -> "[root] module.acm_alb (expand)"
+		"[root] module.acm_alb.var.domain_name (expand)" -> "[root] module.acm_alb (expand)"
+		"[root] module.acm_alb.var.domain_name (expand)" -> "[root] var.public_alb_domain"
+		"[root] module.acm_alb.var.subject_alternative_names (expand)" -> "[root] module.acm_alb (expand)"
+		"[root] module.acm_alb.var.tags (expand)" -> "[root] module.acm_alb (expand)"
+		"[root] module.acm_alb.var.tags (expand)" -> "[root] var.tags"
+		"[root] module.acm_alb.var.validation_method (expand)" -> "[root] module.acm_alb (expand)"
+		"[root] module.alb (close)" -> "[root] module.alb.aws_lb_target_group.main[0]"
+		"[root] module.alb.aws_lb.this (expand)" -> "[root] module.alb.var.create_lb (expand)"
+		"[root] module.alb.aws_lb.this (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] module.alb.aws_lb.this[0]" -> "[root] module.alb.aws_lb.this (expand)"
+		"[root] module.alb.aws_lb.this[0]" -> "[root] module.alb.var.access_logs (expand)"
+		"[root] module.alb.aws_lb.this[0]" -> "[root] module.alb.var.drop_invalid_header_fields (expand)"
+		"[root] module.alb.aws_lb.this[0]" -> "[root] module.alb.var.enable_cross_zone_load_balancing (expand)"
+		"[root] module.alb.aws_lb.this[0]" -> "[root] module.alb.var.enable_deletion_protection (expand)"
+		"[root] module.alb.aws_lb.this[0]" -> "[root] module.alb.var.enable_http2 (expand)"
+		"[root] module.alb.aws_lb.this[0]" -> "[root] module.alb.var.idle_timeout (expand)"
+		"[root] module.alb.aws_lb.this[0]" -> "[root] module.alb.var.internal (expand)"
+		"[root] module.alb.aws_lb.this[0]" -> "[root] module.alb.var.ip_address_type (expand)"
+		"[root] module.alb.aws_lb.this[0]" -> "[root] module.alb.var.lb_tags (expand)"
+		"[root] module.alb.aws_lb.this[0]" -> "[root] module.alb.var.load_balancer_create_timeout (expand)"
+		"[root] module.alb.aws_lb.this[0]" -> "[root] module.alb.var.load_balancer_delete_timeout (expand)"
+		"[root] module.alb.aws_lb.this[0]" -> "[root] module.alb.var.load_balancer_type (expand)"
+		"[root] module.alb.aws_lb.this[0]" -> "[root] module.alb.var.load_balancer_update_timeout (expand)"
+		"[root] module.alb.aws_lb.this[0]" -> "[root] module.alb.var.name (expand)"
+		"[root] module.alb.aws_lb.this[0]" -> "[root] module.alb.var.name_prefix (expand)"
+		"[root] module.alb.aws_lb.this[0]" -> "[root] module.alb.var.security_groups (expand)"
+		"[root] module.alb.aws_lb.this[0]" -> "[root] module.alb.var.subnet_mapping (expand)"
+		"[root] module.alb.aws_lb.this[0]" -> "[root] module.alb.var.subnets (expand)"
+		"[root] module.alb.aws_lb.this[0]" -> "[root] module.alb.var.tags (expand)"
+		"[root] module.alb.aws_lb_target_group.main (expand)" -> "[root] module.alb.var.create_lb (expand)"
+		"[root] module.alb.aws_lb_target_group.main (expand)" -> "[root] module.alb.var.target_groups (expand)"
+		"[root] module.alb.aws_lb_target_group.main (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] module.alb.aws_lb_target_group.main[0]" -> "[root] module.alb.aws_lb.this[0]"
+		"[root] module.alb.aws_lb_target_group.main[0]" -> "[root] module.alb.aws_lb_target_group.main (expand)"
+		"[root] module.alb.aws_lb_target_group.main[0]" -> "[root] module.alb.var.target_group_tags (expand)"
+		"[root] module.alb.aws_lb_target_group.main[0]" -> "[root] module.alb.var.vpc_id (expand)"
+		"[root] module.alb.var.access_logs (expand)" -> "[root] module.alb (expand)"
+		"[root] module.alb.var.create_lb (expand)" -> "[root] module.alb (expand)"
+		"[root] module.alb.var.drop_invalid_header_fields (expand)" -> "[root] module.alb (expand)"
+		"[root] module.alb.var.enable_cross_zone_load_balancing (expand)" -> "[root] module.alb (expand)"
+		"[root] module.alb.var.enable_deletion_protection (expand)" -> "[root] module.alb (expand)"
+		"[root] module.alb.var.enable_http2 (expand)" -> "[root] module.alb (expand)"
+		"[root] module.alb.var.idle_timeout (expand)" -> "[root] module.alb (expand)"
+		"[root] module.alb.var.internal (expand)" -> "[root] module.alb (expand)"
+		"[root] module.alb.var.ip_address_type (expand)" -> "[root] module.alb (expand)"
+		"[root] module.alb.var.lb_tags (expand)" -> "[root] module.alb (expand)"
+		"[root] module.alb.var.load_balancer_create_timeout (expand)" -> "[root] module.alb (expand)"
+		"[root] module.alb.var.load_balancer_delete_timeout (expand)" -> "[root] module.alb (expand)"
+		"[root] module.alb.var.load_balancer_type (expand)" -> "[root] module.alb (expand)"
+		"[root] module.alb.var.load_balancer_update_timeout (expand)" -> "[root] module.alb (expand)"
+		"[root] module.alb.var.name (expand)" -> "[root] module.alb (expand)"
+		"[root] module.alb.var.name (expand)" -> "[root] var.environment"
+		"[root] module.alb.var.name (expand)" -> "[root] var.prefix"
+		"[root] module.alb.var.name_prefix (expand)" -> "[root] module.alb (expand)"
+		"[root] module.alb.var.security_groups (expand)" -> "[root] aws_security_group.alb"
+		"[root] module.alb.var.security_groups (expand)" -> "[root] module.alb (expand)"
+		"[root] module.alb.var.subnet_mapping (expand)" -> "[root] module.alb (expand)"
+		"[root] module.alb.var.subnets (expand)" -> "[root] module.alb (expand)"
+		"[root] module.alb.var.subnets (expand)" -> "[root] module.vpc.output.public_subnets (expand)"
+		"[root] module.alb.var.tags (expand)" -> "[root] module.alb (expand)"
+		"[root] module.alb.var.tags (expand)" -> "[root] var.tags"
+		"[root] module.alb.var.target_group_tags (expand)" -> "[root] module.alb (expand)"
+		"[root] module.alb.var.target_groups (expand)" -> "[root] module.alb (expand)"
+		"[root] module.alb.var.target_groups (expand)" -> "[root] var.environment"
+		"[root] module.alb.var.target_groups (expand)" -> "[root] var.prefix"
+		"[root] module.alb.var.vpc_id (expand)" -> "[root] module.alb (expand)"
+		"[root] module.alb.var.vpc_id (expand)" -> "[root] module.vpc.output.vpc_id (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_route.private_nat_gateway[0]"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_route.private_nat_gateway[1]"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_route.private_nat_gateway[2]"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_route.public_internet_gateway[0]"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_route_table_association.private[0]"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_route_table_association.private[1]"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_route_table_association.private[2]"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_route_table_association.public[0]"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_route_table_association.public[1]"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_route_table_association.public[2]"
+		"[root] module.vpc (close)" -> "[root] module.vpc.output.private_subnets (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.output.public_subnets (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.output.vpc_id (expand)"
+		"[root] module.vpc.aws_eip.nat (expand)" -> "[root] module.vpc.local.nat_gateway_count (expand)"
+		"[root] module.vpc.aws_eip.nat (expand)" -> "[root] module.vpc.var.create_vpc (expand)"
+		"[root] module.vpc.aws_eip.nat (expand)" -> "[root] module.vpc.var.enable_nat_gateway (expand)"
+		"[root] module.vpc.aws_eip.nat (expand)" -> "[root] module.vpc.var.reuse_nat_ips (expand)"
+		"[root] module.vpc.aws_eip.nat[0]" -> "[root] module.vpc.aws_eip.nat (expand)"
+		"[root] module.vpc.aws_eip.nat[0]" -> "[root] module.vpc.var.name (expand)"
+		"[root] module.vpc.aws_eip.nat[0]" -> "[root] module.vpc.var.nat_eip_tags (expand)"
+		"[root] module.vpc.aws_eip.nat[0]" -> "[root] module.vpc.var.tags (expand)"
+		"[root] module.vpc.aws_eip.nat[1]" -> "[root] module.vpc.aws_eip.nat (expand)"
+		"[root] module.vpc.aws_eip.nat[1]" -> "[root] module.vpc.var.name (expand)"
+		"[root] module.vpc.aws_eip.nat[1]" -> "[root] module.vpc.var.nat_eip_tags (expand)"
+		"[root] module.vpc.aws_eip.nat[1]" -> "[root] module.vpc.var.tags (expand)"
+		"[root] module.vpc.aws_eip.nat[2]" -> "[root] module.vpc.aws_eip.nat (expand)"
+		"[root] module.vpc.aws_eip.nat[2]" -> "[root] module.vpc.var.name (expand)"
+		"[root] module.vpc.aws_eip.nat[2]" -> "[root] module.vpc.var.nat_eip_tags (expand)"
+		"[root] module.vpc.aws_eip.nat[2]" -> "[root] module.vpc.var.tags (expand)"
+		"[root] module.vpc.aws_internet_gateway.this (expand)" -> "[root] module.vpc.var.create_igw (expand)"
+		"[root] module.vpc.aws_internet_gateway.this (expand)" -> "[root] module.vpc.var.create_vpc (expand)"
+		"[root] module.vpc.aws_internet_gateway.this (expand)" -> "[root] module.vpc.var.public_subnets (expand)"
+		"[root] module.vpc.aws_internet_gateway.this (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] module.vpc.aws_internet_gateway.this[0]" -> "[root] module.vpc.aws_internet_gateway.this (expand)"
+		"[root] module.vpc.aws_internet_gateway.this[0]" -> "[root] module.vpc.local.vpc_id (expand)"
+		"[root] module.vpc.aws_internet_gateway.this[0]" -> "[root] module.vpc.var.igw_tags (expand)"
+		"[root] module.vpc.aws_nat_gateway.this (expand)" -> "[root] module.vpc.local.nat_gateway_count (expand)"
+		"[root] module.vpc.aws_nat_gateway.this (expand)" -> "[root] module.vpc.var.create_vpc (expand)"
+		"[root] module.vpc.aws_nat_gateway.this (expand)" -> "[root] module.vpc.var.enable_nat_gateway (expand)"
+		"[root] module.vpc.aws_nat_gateway.this[0]" -> "[root] module.vpc.aws_internet_gateway.this[0]"
+		"[root] module.vpc.aws_nat_gateway.this[0]" -> "[root] module.vpc.aws_nat_gateway.this (expand)"
+		"[root] module.vpc.aws_nat_gateway.this[0]" -> "[root] module.vpc.aws_subnet.public[0]"
+		"[root] module.vpc.aws_nat_gateway.this[0]" -> "[root] module.vpc.aws_subnet.public[1]"
+		"[root] module.vpc.aws_nat_gateway.this[0]" -> "[root] module.vpc.aws_subnet.public[2]"
+		"[root] module.vpc.aws_nat_gateway.this[0]" -> "[root] module.vpc.local.nat_gateway_ips (expand)"
+		"[root] module.vpc.aws_nat_gateway.this[0]" -> "[root] module.vpc.var.nat_gateway_tags (expand)"
+		"[root] module.vpc.aws_nat_gateway.this[1]" -> "[root] module.vpc.aws_internet_gateway.this[0]"
+		"[root] module.vpc.aws_nat_gateway.this[1]" -> "[root] module.vpc.aws_nat_gateway.this (expand)"
+		"[root] module.vpc.aws_nat_gateway.this[1]" -> "[root] module.vpc.aws_subnet.public[0]"
+		"[root] module.vpc.aws_nat_gateway.this[1]" -> "[root] module.vpc.aws_subnet.public[1]"
+		"[root] module.vpc.aws_nat_gateway.this[1]" -> "[root] module.vpc.aws_subnet.public[2]"
+		"[root] module.vpc.aws_nat_gateway.this[1]" -> "[root] module.vpc.local.nat_gateway_ips (expand)"
+		"[root] module.vpc.aws_nat_gateway.this[1]" -> "[root] module.vpc.var.nat_gateway_tags (expand)"
+		"[root] module.vpc.aws_nat_gateway.this[2]" -> "[root] module.vpc.aws_internet_gateway.this[0]"
+		"[root] module.vpc.aws_nat_gateway.this[2]" -> "[root] module.vpc.aws_nat_gateway.this (expand)"
+		"[root] module.vpc.aws_nat_gateway.this[2]" -> "[root] module.vpc.aws_subnet.public[0]"
+		"[root] module.vpc.aws_nat_gateway.this[2]" -> "[root] module.vpc.aws_subnet.public[1]"
+		"[root] module.vpc.aws_nat_gateway.this[2]" -> "[root] module.vpc.aws_subnet.public[2]"
+		"[root] module.vpc.aws_nat_gateway.this[2]" -> "[root] module.vpc.local.nat_gateway_ips (expand)"
+		"[root] module.vpc.aws_nat_gateway.this[2]" -> "[root] module.vpc.var.nat_gateway_tags (expand)"
+		"[root] module.vpc.aws_route.private_nat_gateway (expand)" -> "[root] module.vpc.local.nat_gateway_count (expand)"
+		"[root] module.vpc.aws_route.private_nat_gateway (expand)" -> "[root] module.vpc.var.create_vpc (expand)"
+		"[root] module.vpc.aws_route.private_nat_gateway (expand)" -> "[root] module.vpc.var.enable_nat_gateway (expand)"
+		"[root] module.vpc.aws_route.private_nat_gateway[0]" -> "[root] module.vpc.aws_nat_gateway.this[0]"
+		"[root] module.vpc.aws_route.private_nat_gateway[0]" -> "[root] module.vpc.aws_nat_gateway.this[1]"
+		"[root] module.vpc.aws_route.private_nat_gateway[0]" -> "[root] module.vpc.aws_nat_gateway.this[2]"
+		"[root] module.vpc.aws_route.private_nat_gateway[0]" -> "[root] module.vpc.aws_route.private_nat_gateway (expand)"
+		"[root] module.vpc.aws_route.private_nat_gateway[0]" -> "[root] module.vpc.aws_route_table.private[0]"
+		"[root] module.vpc.aws_route.private_nat_gateway[0]" -> "[root] module.vpc.aws_route_table.private[1]"
+		"[root] module.vpc.aws_route.private_nat_gateway[0]" -> "[root] module.vpc.aws_route_table.private[2]"
+		"[root] module.vpc.aws_route.private_nat_gateway[1]" -> "[root] module.vpc.aws_nat_gateway.this[0]"
+		"[root] module.vpc.aws_route.private_nat_gateway[1]" -> "[root] module.vpc.aws_nat_gateway.this[1]"
+		"[root] module.vpc.aws_route.private_nat_gateway[1]" -> "[root] module.vpc.aws_nat_gateway.this[2]"
+		"[root] module.vpc.aws_route.private_nat_gateway[1]" -> "[root] module.vpc.aws_route.private_nat_gateway (expand)"
+		"[root] module.vpc.aws_route.private_nat_gateway[1]" -> "[root] module.vpc.aws_route_table.private[0]"
+		"[root] module.vpc.aws_route.private_nat_gateway[1]" -> "[root] module.vpc.aws_route_table.private[1]"
+		"[root] module.vpc.aws_route.private_nat_gateway[1]" -> "[root] module.vpc.aws_route_table.private[2]"
+		"[root] module.vpc.aws_route.private_nat_gateway[2]" -> "[root] module.vpc.aws_nat_gateway.this[0]"
+		"[root] module.vpc.aws_route.private_nat_gateway[2]" -> "[root] module.vpc.aws_nat_gateway.this[1]"
+		"[root] module.vpc.aws_route.private_nat_gateway[2]" -> "[root] module.vpc.aws_nat_gateway.this[2]"
+		"[root] module.vpc.aws_route.private_nat_gateway[2]" -> "[root] module.vpc.aws_route.private_nat_gateway (expand)"
+		"[root] module.vpc.aws_route.private_nat_gateway[2]" -> "[root] module.vpc.aws_route_table.private[0]"
+		"[root] module.vpc.aws_route.private_nat_gateway[2]" -> "[root] module.vpc.aws_route_table.private[1]"
+		"[root] module.vpc.aws_route.private_nat_gateway[2]" -> "[root] module.vpc.aws_route_table.private[2]"
+		"[root] module.vpc.aws_route.public_internet_gateway (expand)" -> "[root] module.vpc.var.create_igw (expand)"
+		"[root] module.vpc.aws_route.public_internet_gateway (expand)" -> "[root] module.vpc.var.create_vpc (expand)"
+		"[root] module.vpc.aws_route.public_internet_gateway (expand)" -> "[root] module.vpc.var.public_subnets (expand)"
+		"[root] module.vpc.aws_route.public_internet_gateway (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] module.vpc.aws_route.public_internet_gateway[0]" -> "[root] module.vpc.aws_internet_gateway.this[0]"
+		"[root] module.vpc.aws_route.public_internet_gateway[0]" -> "[root] module.vpc.aws_route.public_internet_gateway (expand)"
+		"[root] module.vpc.aws_route.public_internet_gateway[0]" -> "[root] module.vpc.aws_route_table.public[0]"
+		"[root] module.vpc.aws_route_table.private (expand)" -> "[root] module.vpc.local.nat_gateway_count (expand)"
+		"[root] module.vpc.aws_route_table.private (expand)" -> "[root] module.vpc.var.create_vpc (expand)"
+		"[root] module.vpc.aws_route_table.private[0]" -> "[root] module.vpc.aws_route_table.private (expand)"
+		"[root] module.vpc.aws_route_table.private[0]" -> "[root] module.vpc.local.vpc_id (expand)"
+		"[root] module.vpc.aws_route_table.private[0]" -> "[root] module.vpc.var.private_route_table_tags (expand)"
+		"[root] module.vpc.aws_route_table.private[0]" -> "[root] module.vpc.var.private_subnet_suffix (expand)"
+		"[root] module.vpc.aws_route_table.private[1]" -> "[root] module.vpc.aws_route_table.private (expand)"
+		"[root] module.vpc.aws_route_table.private[1]" -> "[root] module.vpc.local.vpc_id (expand)"
+		"[root] module.vpc.aws_route_table.private[1]" -> "[root] module.vpc.var.private_route_table_tags (expand)"
+		"[root] module.vpc.aws_route_table.private[1]" -> "[root] module.vpc.var.private_subnet_suffix (expand)"
+		"[root] module.vpc.aws_route_table.private[2]" -> "[root] module.vpc.aws_route_table.private (expand)"
+		"[root] module.vpc.aws_route_table.private[2]" -> "[root] module.vpc.local.vpc_id (expand)"
+		"[root] module.vpc.aws_route_table.private[2]" -> "[root] module.vpc.var.private_route_table_tags (expand)"
+		"[root] module.vpc.aws_route_table.private[2]" -> "[root] module.vpc.var.private_subnet_suffix (expand)"
+		"[root] module.vpc.aws_route_table.public (expand)" -> "[root] module.vpc.var.create_vpc (expand)"
+		"[root] module.vpc.aws_route_table.public (expand)" -> "[root] module.vpc.var.public_subnets (expand)"
+		"[root] module.vpc.aws_route_table.public (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] module.vpc.aws_route_table.public[0]" -> "[root] module.vpc.aws_route_table.public (expand)"
+		"[root] module.vpc.aws_route_table.public[0]" -> "[root] module.vpc.local.vpc_id (expand)"
+		"[root] module.vpc.aws_route_table.public[0]" -> "[root] module.vpc.var.public_route_table_tags (expand)"
+		"[root] module.vpc.aws_route_table.public[0]" -> "[root] module.vpc.var.public_subnet_suffix (expand)"
+		"[root] module.vpc.aws_route_table_association.private (expand)" -> "[root] module.vpc.var.create_vpc (expand)"
+		"[root] module.vpc.aws_route_table_association.private (expand)" -> "[root] module.vpc.var.private_subnets (expand)"
+		"[root] module.vpc.aws_route_table_association.private (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] module.vpc.aws_route_table_association.private[0]" -> "[root] module.vpc.aws_route_table.private[0]"
+		"[root] module.vpc.aws_route_table_association.private[0]" -> "[root] module.vpc.aws_route_table.private[1]"
+		"[root] module.vpc.aws_route_table_association.private[0]" -> "[root] module.vpc.aws_route_table.private[2]"
+		"[root] module.vpc.aws_route_table_association.private[0]" -> "[root] module.vpc.aws_route_table_association.private (expand)"
+		"[root] module.vpc.aws_route_table_association.private[0]" -> "[root] module.vpc.aws_subnet.private[0]"
+		"[root] module.vpc.aws_route_table_association.private[0]" -> "[root] module.vpc.aws_subnet.private[1]"
+		"[root] module.vpc.aws_route_table_association.private[0]" -> "[root] module.vpc.aws_subnet.private[2]"
+		"[root] module.vpc.aws_route_table_association.private[1]" -> "[root] module.vpc.aws_route_table.private[0]"
+		"[root] module.vpc.aws_route_table_association.private[1]" -> "[root] module.vpc.aws_route_table.private[1]"
+		"[root] module.vpc.aws_route_table_association.private[1]" -> "[root] module.vpc.aws_route_table.private[2]"
+		"[root] module.vpc.aws_route_table_association.private[1]" -> "[root] module.vpc.aws_route_table_association.private (expand)"
+		"[root] module.vpc.aws_route_table_association.private[1]" -> "[root] module.vpc.aws_subnet.private[0]"
+		"[root] module.vpc.aws_route_table_association.private[1]" -> "[root] module.vpc.aws_subnet.private[1]"
+		"[root] module.vpc.aws_route_table_association.private[1]" -> "[root] module.vpc.aws_subnet.private[2]"
+		"[root] module.vpc.aws_route_table_association.private[2]" -> "[root] module.vpc.aws_route_table.private[0]"
+		"[root] module.vpc.aws_route_table_association.private[2]" -> "[root] module.vpc.aws_route_table.private[1]"
+		"[root] module.vpc.aws_route_table_association.private[2]" -> "[root] module.vpc.aws_route_table.private[2]"
+		"[root] module.vpc.aws_route_table_association.private[2]" -> "[root] module.vpc.aws_route_table_association.private (expand)"
+		"[root] module.vpc.aws_route_table_association.private[2]" -> "[root] module.vpc.aws_subnet.private[0]"
+		"[root] module.vpc.aws_route_table_association.private[2]" -> "[root] module.vpc.aws_subnet.private[1]"
+		"[root] module.vpc.aws_route_table_association.private[2]" -> "[root] module.vpc.aws_subnet.private[2]"
+		"[root] module.vpc.aws_route_table_association.public (expand)" -> "[root] module.vpc.var.create_vpc (expand)"
+		"[root] module.vpc.aws_route_table_association.public (expand)" -> "[root] module.vpc.var.public_subnets (expand)"
+		"[root] module.vpc.aws_route_table_association.public (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] module.vpc.aws_route_table_association.public[0]" -> "[root] module.vpc.aws_route_table.public[0]"
+		"[root] module.vpc.aws_route_table_association.public[0]" -> "[root] module.vpc.aws_route_table_association.public (expand)"
+		"[root] module.vpc.aws_route_table_association.public[0]" -> "[root] module.vpc.aws_subnet.public[0]"
+		"[root] module.vpc.aws_route_table_association.public[0]" -> "[root] module.vpc.aws_subnet.public[1]"
+		"[root] module.vpc.aws_route_table_association.public[0]" -> "[root] module.vpc.aws_subnet.public[2]"
+		"[root] module.vpc.aws_route_table_association.public[1]" -> "[root] module.vpc.aws_route_table.public[0]"
+		"[root] module.vpc.aws_route_table_association.public[1]" -> "[root] module.vpc.aws_route_table_association.public (expand)"
+		"[root] module.vpc.aws_route_table_association.public[1]" -> "[root] module.vpc.aws_subnet.public[0]"
+		"[root] module.vpc.aws_route_table_association.public[1]" -> "[root] module.vpc.aws_subnet.public[1]"
+		"[root] module.vpc.aws_route_table_association.public[1]" -> "[root] module.vpc.aws_subnet.public[2]"
+		"[root] module.vpc.aws_route_table_association.public[2]" -> "[root] module.vpc.aws_route_table.public[0]"
+		"[root] module.vpc.aws_route_table_association.public[2]" -> "[root] module.vpc.aws_route_table_association.public (expand)"
+		"[root] module.vpc.aws_route_table_association.public[2]" -> "[root] module.vpc.aws_subnet.public[0]"
+		"[root] module.vpc.aws_route_table_association.public[2]" -> "[root] module.vpc.aws_subnet.public[1]"
+		"[root] module.vpc.aws_route_table_association.public[2]" -> "[root] module.vpc.aws_subnet.public[2]"
+		"[root] module.vpc.aws_subnet.private (expand)" -> "[root] module.vpc.var.create_vpc (expand)"
+		"[root] module.vpc.aws_subnet.private (expand)" -> "[root] module.vpc.var.private_subnets (expand)"
+		"[root] module.vpc.aws_subnet.private (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] module.vpc.aws_subnet.private[0]" -> "[root] module.vpc.aws_subnet.private (expand)"
+		"[root] module.vpc.aws_subnet.private[0]" -> "[root] module.vpc.local.vpc_id (expand)"
+		"[root] module.vpc.aws_subnet.private[0]" -> "[root] module.vpc.var.assign_ipv6_address_on_creation (expand)"
+		"[root] module.vpc.aws_subnet.private[0]" -> "[root] module.vpc.var.azs (expand)"
+		"[root] module.vpc.aws_subnet.private[0]" -> "[root] module.vpc.var.private_subnet_assign_ipv6_address_on_creation (expand)"
+		"[root] module.vpc.aws_subnet.private[0]" -> "[root] module.vpc.var.private_subnet_ipv6_prefixes (expand)"
+		"[root] module.vpc.aws_subnet.private[0]" -> "[root] module.vpc.var.private_subnet_suffix (expand)"
+		"[root] module.vpc.aws_subnet.private[0]" -> "[root] module.vpc.var.private_subnet_tags (expand)"
+		"[root] module.vpc.aws_subnet.private[1]" -> "[root] module.vpc.aws_subnet.private (expand)"
+		"[root] module.vpc.aws_subnet.private[1]" -> "[root] module.vpc.local.vpc_id (expand)"
+		"[root] module.vpc.aws_subnet.private[1]" -> "[root] module.vpc.var.assign_ipv6_address_on_creation (expand)"
+		"[root] module.vpc.aws_subnet.private[1]" -> "[root] module.vpc.var.azs (expand)"
+		"[root] module.vpc.aws_subnet.private[1]" -> "[root] module.vpc.var.private_subnet_assign_ipv6_address_on_creation (expand)"
+		"[root] module.vpc.aws_subnet.private[1]" -> "[root] module.vpc.var.private_subnet_ipv6_prefixes (expand)"
+		"[root] module.vpc.aws_subnet.private[1]" -> "[root] module.vpc.var.private_subnet_suffix (expand)"
+		"[root] module.vpc.aws_subnet.private[1]" -> "[root] module.vpc.var.private_subnet_tags (expand)"
+		"[root] module.vpc.aws_subnet.private[2]" -> "[root] module.vpc.aws_subnet.private (expand)"
+		"[root] module.vpc.aws_subnet.private[2]" -> "[root] module.vpc.local.vpc_id (expand)"
+		"[root] module.vpc.aws_subnet.private[2]" -> "[root] module.vpc.var.assign_ipv6_address_on_creation (expand)"
+		"[root] module.vpc.aws_subnet.private[2]" -> "[root] module.vpc.var.azs (expand)"
+		"[root] module.vpc.aws_subnet.private[2]" -> "[root] module.vpc.var.private_subnet_assign_ipv6_address_on_creation (expand)"
+		"[root] module.vpc.aws_subnet.private[2]" -> "[root] module.vpc.var.private_subnet_ipv6_prefixes (expand)"
+		"[root] module.vpc.aws_subnet.private[2]" -> "[root] module.vpc.var.private_subnet_suffix (expand)"
+		"[root] module.vpc.aws_subnet.private[2]" -> "[root] module.vpc.var.private_subnet_tags (expand)"
+		"[root] module.vpc.aws_subnet.public (expand)" -> "[root] module.vpc.var.azs (expand)"
+		"[root] module.vpc.aws_subnet.public (expand)" -> "[root] module.vpc.var.create_vpc (expand)"
+		"[root] module.vpc.aws_subnet.public (expand)" -> "[root] module.vpc.var.one_nat_gateway_per_az (expand)"
+		"[root] module.vpc.aws_subnet.public (expand)" -> "[root] module.vpc.var.public_subnets (expand)"
+		"[root] module.vpc.aws_subnet.public[0]" -> "[root] module.vpc.aws_subnet.public (expand)"
+		"[root] module.vpc.aws_subnet.public[0]" -> "[root] module.vpc.local.vpc_id (expand)"
+		"[root] module.vpc.aws_subnet.public[0]" -> "[root] module.vpc.var.assign_ipv6_address_on_creation (expand)"
+		"[root] module.vpc.aws_subnet.public[0]" -> "[root] module.vpc.var.map_public_ip_on_launch (expand)"
+		"[root] module.vpc.aws_subnet.public[0]" -> "[root] module.vpc.var.public_subnet_assign_ipv6_address_on_creation (expand)"
+		"[root] module.vpc.aws_subnet.public[0]" -> "[root] module.vpc.var.public_subnet_ipv6_prefixes (expand)"
+		"[root] module.vpc.aws_subnet.public[0]" -> "[root] module.vpc.var.public_subnet_suffix (expand)"
+		"[root] module.vpc.aws_subnet.public[0]" -> "[root] module.vpc.var.public_subnet_tags (expand)"
+		"[root] module.vpc.aws_subnet.public[1]" -> "[root] module.vpc.aws_subnet.public (expand)"
+		"[root] module.vpc.aws_subnet.public[1]" -> "[root] module.vpc.local.vpc_id (expand)"
+		"[root] module.vpc.aws_subnet.public[1]" -> "[root] module.vpc.var.assign_ipv6_address_on_creation (expand)"
+		"[root] module.vpc.aws_subnet.public[1]" -> "[root] module.vpc.var.map_public_ip_on_launch (expand)"
+		"[root] module.vpc.aws_subnet.public[1]" -> "[root] module.vpc.var.public_subnet_assign_ipv6_address_on_creation (expand)"
+		"[root] module.vpc.aws_subnet.public[1]" -> "[root] module.vpc.var.public_subnet_ipv6_prefixes (expand)"
+		"[root] module.vpc.aws_subnet.public[1]" -> "[root] module.vpc.var.public_subnet_suffix (expand)"
+		"[root] module.vpc.aws_subnet.public[1]" -> "[root] module.vpc.var.public_subnet_tags (expand)"
+		"[root] module.vpc.aws_subnet.public[2]" -> "[root] module.vpc.aws_subnet.public (expand)"
+		"[root] module.vpc.aws_subnet.public[2]" -> "[root] module.vpc.local.vpc_id (expand)"
+		"[root] module.vpc.aws_subnet.public[2]" -> "[root] module.vpc.var.assign_ipv6_address_on_creation (expand)"
+		"[root] module.vpc.aws_subnet.public[2]" -> "[root] module.vpc.var.map_public_ip_on_launch (expand)"
+		"[root] module.vpc.aws_subnet.public[2]" -> "[root] module.vpc.var.public_subnet_assign_ipv6_address_on_creation (expand)"
+		"[root] module.vpc.aws_subnet.public[2]" -> "[root] module.vpc.var.public_subnet_ipv6_prefixes (expand)"
+		"[root] module.vpc.aws_subnet.public[2]" -> "[root] module.vpc.var.public_subnet_suffix (expand)"
+		"[root] module.vpc.aws_subnet.public[2]" -> "[root] module.vpc.var.public_subnet_tags (expand)"
+		"[root] module.vpc.aws_vpc.this (expand)" -> "[root] module.vpc.var.create_vpc (expand)"
+		"[root] module.vpc.aws_vpc.this (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] module.vpc.aws_vpc.this[0]" -> "[root] module.vpc.aws_vpc.this (expand)"
+		"[root] module.vpc.aws_vpc.this[0]" -> "[root] module.vpc.var.cidr (expand)"
+		"[root] module.vpc.aws_vpc.this[0]" -> "[root] module.vpc.var.enable_dns_hostnames (expand)"
+		"[root] module.vpc.aws_vpc.this[0]" -> "[root] module.vpc.var.enable_dns_support (expand)"
+		"[root] module.vpc.aws_vpc.this[0]" -> "[root] module.vpc.var.enable_ipv6 (expand)"
+		"[root] module.vpc.aws_vpc.this[0]" -> "[root] module.vpc.var.instance_tenancy (expand)"
+		"[root] module.vpc.aws_vpc.this[0]" -> "[root] module.vpc.var.name (expand)"
+		"[root] module.vpc.aws_vpc.this[0]" -> "[root] module.vpc.var.tags (expand)"
+		"[root] module.vpc.aws_vpc.this[0]" -> "[root] module.vpc.var.vpc_tags (expand)"
+		"[root] module.vpc.aws_vpc_ipv4_cidr_block_association.this (expand)" -> "[root] module.vpc.var.create_vpc (expand)"
+		"[root] module.vpc.aws_vpc_ipv4_cidr_block_association.this (expand)" -> "[root] module.vpc.var.secondary_cidr_blocks (expand)"
+		"[root] module.vpc.aws_vpc_ipv4_cidr_block_association.this (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] module.vpc.local.max_subnet_length (expand)" -> "[root] module.vpc.var.database_subnets (expand)"
+		"[root] module.vpc.local.max_subnet_length (expand)" -> "[root] module.vpc.var.elasticache_subnets (expand)"
+		"[root] module.vpc.local.max_subnet_length (expand)" -> "[root] module.vpc.var.private_subnets (expand)"
+		"[root] module.vpc.local.max_subnet_length (expand)" -> "[root] module.vpc.var.redshift_subnets (expand)"
+		"[root] module.vpc.local.nat_gateway_count (expand)" -> "[root] module.vpc.local.max_subnet_length (expand)"
+		"[root] module.vpc.local.nat_gateway_count (expand)" -> "[root] module.vpc.var.azs (expand)"
+		"[root] module.vpc.local.nat_gateway_count (expand)" -> "[root] module.vpc.var.one_nat_gateway_per_az (expand)"
+		"[root] module.vpc.local.nat_gateway_count (expand)" -> "[root] module.vpc.var.single_nat_gateway (expand)"
+		"[root] module.vpc.local.nat_gateway_ips (expand)" -> "[root] module.vpc.aws_eip.nat[0]"
+		"[root] module.vpc.local.nat_gateway_ips (expand)" -> "[root] module.vpc.aws_eip.nat[1]"
+		"[root] module.vpc.local.nat_gateway_ips (expand)" -> "[root] module.vpc.aws_eip.nat[2]"
+		"[root] module.vpc.local.nat_gateway_ips (expand)" -> "[root] module.vpc.var.external_nat_ip_ids (expand)"
+		"[root] module.vpc.local.vpc_id (expand)" -> "[root] module.vpc.aws_vpc.this[0]"
+		"[root] module.vpc.local.vpc_id (expand)" -> "[root] module.vpc.aws_vpc_ipv4_cidr_block_association.this (expand)"
+		"[root] module.vpc.output.private_subnets (expand)" -> "[root] module.vpc.aws_subnet.private[0]"
+		"[root] module.vpc.output.private_subnets (expand)" -> "[root] module.vpc.aws_subnet.private[1]"
+		"[root] module.vpc.output.private_subnets (expand)" -> "[root] module.vpc.aws_subnet.private[2]"
+		"[root] module.vpc.output.public_subnets (expand)" -> "[root] module.vpc.aws_subnet.public[0]"
+		"[root] module.vpc.output.public_subnets (expand)" -> "[root] module.vpc.aws_subnet.public[1]"
+		"[root] module.vpc.output.public_subnets (expand)" -> "[root] module.vpc.aws_subnet.public[2]"
+		"[root] module.vpc.output.vpc_id (expand)" -> "[root] module.vpc.aws_vpc.this[0]"
+		"[root] module.vpc.var.assign_ipv6_address_on_creation (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.azs (expand)" -> "[root] data.aws_availability_zones.this (expand)"
+		"[root] module.vpc.var.azs (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.cidr (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.cidr (expand)" -> "[root] var.vpc_cidr"
+		"[root] module.vpc.var.create_igw (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.create_vpc (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.database_subnets (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.elasticache_subnets (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.enable_dns_hostnames (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.enable_dns_support (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.enable_ipv6 (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.enable_nat_gateway (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.external_nat_ip_ids (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.igw_tags (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.instance_tenancy (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.map_public_ip_on_launch (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.name (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.name (expand)" -> "[root] var.environment"
+		"[root] module.vpc.var.name (expand)" -> "[root] var.prefix"
+		"[root] module.vpc.var.nat_eip_tags (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.nat_gateway_tags (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.one_nat_gateway_per_az (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.private_route_table_tags (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.private_subnet_assign_ipv6_address_on_creation (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.private_subnet_ipv6_prefixes (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.private_subnet_suffix (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.private_subnet_tags (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.private_subnets (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.private_subnets (expand)" -> "[root] var.private_subnet_cidrs"
+		"[root] module.vpc.var.public_route_table_tags (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.public_subnet_assign_ipv6_address_on_creation (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.public_subnet_ipv6_prefixes (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.public_subnet_suffix (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.public_subnet_tags (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.public_subnets (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.public_subnets (expand)" -> "[root] var.public_subnet_cidrs"
+		"[root] module.vpc.var.redshift_subnets (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.reuse_nat_ips (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.secondary_cidr_blocks (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.single_nat_gateway (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.tags (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.tags (expand)" -> "[root] var.tags"
+		"[root] module.vpc.var.vpc_tags (expand)" -> "[root] module.vpc (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_cloudwatch_metric_alarm.cpu_utilization_high"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_cloudwatch_metric_alarm.cpu_utilization_low"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_efs_mount_target.this[0]"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_efs_mount_target.this[1]"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_efs_mount_target.this[2]"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_iam_role_policy_attachment.task_execution_policy_attach"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_iam_role_policy_attachment.task_policy_attach"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_security_group.wordpress"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.acm_alb.aws_acm_certificate.this[0]"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.alb.aws_lb_target_group.main[0]"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_route.private_nat_gateway[0]"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_route.private_nat_gateway[1]"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_route.private_nat_gateway[2]"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_route.public_internet_gateway[0]"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_route_table_association.private[0]"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_route_table_association.private[1]"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_route_table_association.private[2]"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_route_table_association.public[0]"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_route_table_association.public[1]"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_route_table_association.public[2]"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"].us_east_1 (close)" -> "[root] module.acm.aws_acm_certificate.this[0]"
+		"[root] provider[\"registry.terraform.io/hashicorp/random\"] (close)" -> "[root] random_string.snapshot_suffix"
+		"[root] random_string.snapshot_suffix (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/random\"]"
+		"[root] random_string.snapshot_suffix" -> "[root] random_string.snapshot_suffix (expand)"
+		"[root] root" -> "[root] module.acm (close)"
+		"[root] root" -> "[root] module.acm_alb (close)"
+		"[root] root" -> "[root] module.alb (close)"
+		"[root] root" -> "[root] module.vpc (close)"
+		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"].us_east_1 (close)"
+		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/random\"] (close)"
+		"[root] root" -> "[root] var.cf_price_class"
+		"[root] root" -> "[root] var.error_ttl"
+	}
+}
+
