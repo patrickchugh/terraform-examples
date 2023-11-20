@@ -1,6 +1,7 @@
 module "vpc" {
   source                 = "terraform-aws-modules/vpc/aws"
   name                   = "${var.prefix}-${var.environment}"
+  version                = "5.2.0"
   cidr                   = var.vpc_cidr
   azs                    = data.aws_availability_zones.this.names
   private_subnets        = var.private_subnet_cidrs
@@ -9,6 +10,5 @@ module "vpc" {
   single_nat_gateway     = false
   one_nat_gateway_per_az = false
   tags                   = var.tags
-  version                = "~>2.0"
   enable_dns_hostnames   = true
 }
