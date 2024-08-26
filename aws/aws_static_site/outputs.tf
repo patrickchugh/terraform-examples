@@ -4,7 +4,7 @@ output "bucket_name" {
   # Terraform isn't particularly helpful when you want to depend on the existence of a resource which may have count 0 or 1, like our bucket.
   # This is a hacky way of only resolving the bucket_name output once the bucket exists (if created by us).
   # https://github.com/hashicorp/terraform/issues/16580#issuecomment-342573652
-  value = "${local.bucket_name}${replace("${element(concat(aws_s3_bucket.this.*.bucket, list("")), 0)}", "/.*/", "")}"
+  value = "${local.bucket_name}${replace("${element(concat(aws_s3_bucket.this.*.bucket, tolist("")), 0)}", "/.*/", "")}"
 }
 
 output "cloudfront_id" {
