@@ -34,5 +34,5 @@ resource "aws_route53_record" "cert_validation" {
 resource "aws_acm_certificate_validation" "this" {
   #provider                = "aws.us_east_1"                                # because ACM is only available in the "us-east-1" region
   certificate_arn         = "${aws_acm_certificate.this.arn}"
-  validation_record_fqdns = ["${aws_route53_record.cert_validation.fqdn}"]
+  validation_record_fqdns = ["${ aws_route53_record.cert_validation[each.key]}"]
 }
