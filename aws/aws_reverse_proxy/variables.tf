@@ -1,5 +1,6 @@
 variable "site_domain" {
   description = "Domain on which the reverse proxy will be made available (e.g. `\"www.example.com\"`)"
+  default = "example.com"
 }
 
 variable "name_prefix" {
