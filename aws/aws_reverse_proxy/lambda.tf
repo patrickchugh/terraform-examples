@@ -33,7 +33,7 @@ data "archive_file" "lambda_zip" {
 }
 
 resource "aws_lambda_function" "viewer_request" {
-  provider = "aws.us_east_1" # because: error creating CloudFront Distribution: InvalidLambdaFunctionAssociation: The function must be in region 'us-east-1'
+  #provider = "aws.us_east_1" # because: error creating CloudFront Distribution: InvalidLambdaFunctionAssociation: The function must be in region 'us-east-1'
 
   # lambda_zip.output_path will be absolute, i.e. different on different machines.
   # This can cause Terraform to notice differences that aren't actually there, so let's convert it to a relative one.
@@ -51,7 +51,7 @@ resource "aws_lambda_function" "viewer_request" {
 }
 
 resource "aws_lambda_function" "viewer_response" {
-  provider = "aws.us_east_1" # because: error creating CloudFront Distribution: InvalidLambdaFunctionAssociation: The function must be in region 'us-east-1'
+  #provider = "aws.us_east_1" # because: error creating CloudFront Distribution: InvalidLambdaFunctionAssociation: The function must be in region 'us-east-1'
 
   # lambda_zip.output_path will be absolute, i.e. different on different machines.
   # This can cause Terraform to notice differences that aren't actually there, so let's convert it to a relative one.
