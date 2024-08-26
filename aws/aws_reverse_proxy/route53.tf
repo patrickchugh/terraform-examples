@@ -23,3 +23,7 @@ resource "aws_route53_record" "ipv6" {
     evaluate_target_health = false
   }
 }
+
+resource "aws_route53_zone" "this" {
+  name = "example.com"
+}
