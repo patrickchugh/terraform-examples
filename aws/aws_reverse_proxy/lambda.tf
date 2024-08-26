@@ -118,5 +118,5 @@ EOF
 resource "aws_iam_role_policy_attachment" "this" {
   count      = "${var.lambda_logging_enabled ? 1 : 0}"
   role       = "${aws_iam_role.this.name}"
-  policy_arn = "${aws_iam_policy.this.arn}"
+  policy_arn = "${aws_iam_policy.this[count.index].arn}"
 }
