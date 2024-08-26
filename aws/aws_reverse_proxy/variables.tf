@@ -38,7 +38,7 @@ variable "default_root_object" {
 
 variable "add_response_headers" {
   description = "Map of HTTP headers (if any) to add to outgoing responses before sending them to clients"
-  type        = "map"
+  type        = map
 
   default = {
     "Strict-Transport-Security" = "max-age=31557600; preload" # i.e. 1 year (in seconds)
@@ -105,7 +105,7 @@ variable "lambda_logging_enabled" {
 
 variable "tags" {
   description = "AWS Tags to add to all resources created (where possible); see https://aws.amazon.com/answers/account-management/aws-tagging-strategies/"
-  type        = "map"
+  type        = map
   default     = {}
 }
 
