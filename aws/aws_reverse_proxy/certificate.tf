@@ -30,6 +30,11 @@ resource "aws_route53_record" "cert_validation" {
   
 }
 
+resource "aws_acm_certificate_validation" "this" {
+  certificate_arn         = aws_acm_certificate.this.arn
+  validation_record_fqdns = [for record in aws_route53_record.cert_validation : record.fqdn]
+}
+
 # Request a validation for the cert with ACM
 #resource "aws_acm_certificate_validation" "this" {
   #provider                = "aws.us_east_1"                                # because ACM is only available in the "us-east-1" region
