@@ -4,7 +4,7 @@ resource "aws_acm_certificate" "this" {
   #provider          = "aws.us_east_1"                                                              # because ACM is only available in the "us-east-1" region
   domain_name       = "${var.site_domain}"
   validation_method = "DNS"                                                                        # the required records are created below
-  tags              = "${merge(var.tags, tomap("Name", "${var.comment_prefix}${var.site_domain}"))}"
+  #tags              = "${merge(var.tags, tomap(  "${var.comment_prefix}${var.site_domain}"))}"
 }
 
 # Add the DNS records needed by the ACM validation process
