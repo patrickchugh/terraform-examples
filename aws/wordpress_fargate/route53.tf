@@ -1,7 +1,7 @@
 # ACM
 data "aws_route53_zone" "this" {
   #name = replace(var.site_domain, "/.*\\b(\\w+\\.\\w+)\\.?$/", "$1") # gets domain from subdomain e.g. "foo.example.com" => "example.com"
-  name = "foo.example.com"
+  name = "example.com"
   #zone_id = "Z1017156O279JAVBAIZ3"
 }
 
