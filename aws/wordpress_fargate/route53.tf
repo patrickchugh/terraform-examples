@@ -2,6 +2,7 @@
 data "aws_route53_zone" "this" {
   #name = replace(var.site_domain, "/.*\\b(\\w+\\.\\w+)\\.?$/", "$1") # gets domain from subdomain e.g. "foo.example.com" => "example.com"
   name = "example.com"
+  private_zone = true
   #zone_id = "Z1017156O279JAVBAIZ3"
 }
 
