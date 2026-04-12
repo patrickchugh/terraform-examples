@@ -14,7 +14,7 @@ module "acm" {
 
 resource "aws_cloudfront_distribution" "this" {
   origin {
-    domain_name = var.public_alb_domain
+    domain_name = module.alb.this_lb_dns_name
     origin_id   = "alb"
 
     custom_origin_config {
@@ -135,9 +135,6 @@ resource "aws_cloudfront_distribution" "this" {
     error_caching_min_ttl = var.error_ttl
   }
 
-  depends_on = [
-    aws_ecs_service.this
-  ]
 }
 
 
